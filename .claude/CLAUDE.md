@@ -31,5 +31,5 @@ All solutions live in `src/main/java/` under the package `main.java`. Each file 
 ## Testing Convention
 
 - **Never use JUnit or any test framework.** All test cases go directly in the `public static void main(String[] args)` method of the class being tested.
-- **Never modify the solution method(s).** Only add or update the `main()` method; leave all existing logic untouched.
+- **CRITICAL — Never modify any algorithm/solution method under any circumstances.** When asked to add tests or run the main method, only add or update the `main()` method. Do NOT rename, refactor, add parameters to, or change the logic of any existing method other than `main()`.
 - Test cases should print `[PASS]` / `[FAIL]` per case and a summary line at the end (e.g., `Result: 6/6 passed`).
