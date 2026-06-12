@@ -1,6 +1,4 @@
-package main.java;
-
-import java.util.Arrays;
+package main.java.hard;
 
 public class FindDuplicate {
 

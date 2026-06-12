@@ -1,4 +1,4 @@
-package main.java;
+package main.java.hard;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.util.Map;
  *
  *   </pre>
  */
-public class NewClass {
+public class CountSubArraySum {
 
 
     public static int subarraySum(int[] nums, int k) {

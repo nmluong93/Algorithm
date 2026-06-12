@@ -22,13 +22,13 @@ public class LongestSubStringWithoutRepeat {
 
     /**
      * "abcabcbb"
-     *  ↑        left, right cùng bắt đầu ở 0
+     *  ↑        left, right both start at 0
      *
      * [a]           → OK, size=1
      * [a,b]         → OK, size=2
      * [a,b,c]       → OK, size=3  ← maxLen=3
-     * [b,c,a]       → gặp 'a' trùng, bỏ 'a' cũ, left tiến
-     * [c,a,b]       → gặp 'b' trùng, bỏ 'b' cũ, left tiến
+     * [b,c,a]       → found duplicate 'a', remove old 'a', advance left
+     * [c,a,b]       → found duplicate 'b', remove old 'b', advance left
      * ...
      */
     private static int lengthOfLongestSubstring(String s) {

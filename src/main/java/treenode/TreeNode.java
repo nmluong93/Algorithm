@@ -36,4 +36,8 @@ public class TreeNode<T> {
     public TreeNode getRight() {
         return right;
     }
+
+    public T getData() {
+        return data;
+    }
 }

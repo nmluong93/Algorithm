@@ -28,6 +28,24 @@ All solutions live in `src/main/java/` under the package `main.java`. Each file 
 - Inner classes (e.g., `ListNode`) are defined as `static` nested classes when a data structure is needed.
 - No external dependencies.
 
+## Javadoc Convention
+
+- Wrap all Javadoc body content inside `<pre> </pre>` tags to preserve indentation and formatting when rendered.
+- Example:
+  ```java
+  /**
+   * <pre>
+   * Problem Description
+   *
+   * Given ...
+   *
+   * Example
+   *     Input:  ...
+   *     Output: ...
+   * </pre>
+   */
+  ```
+
 ## Testing Convention
 
 - **Never use JUnit or any test framework.** All test cases go directly in the `public static void main(String[] args)` method of the class being tested.

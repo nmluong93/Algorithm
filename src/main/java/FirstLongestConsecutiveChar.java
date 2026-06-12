@@ -1,5 +1,7 @@
 package main.java;
 
+import java.util.Arrays;
+
 public class FirstLongestConsecutiveChar {
 
     public static char findLongestConsecutiveChar(String s) {
@@ -34,7 +36,6 @@ public class FirstLongestConsecutiveChar {
                 // Find global maximum
                 if (longest[index] > maxCount) {
                     maxCount = longest[index];
-                    System.out.println(String.format("Max count is %s, of char %s", maxCount, c));
                     resultChar = c;
                 }
 
@@ -45,20 +46,29 @@ public class FirstLongestConsecutiveChar {
         return resultChar;
     }
 
+    static void countCharOccurrence() {
+        int[] count = new int[26];
+
+        for (char c : "abcddeeeffff".toCharArray()) {
+            count[c - 'a']++;
+        }
+        System.out.println(Arrays.toString(count));
+    }
+
     public static void main(String[] args) {
         int passed = 0;
         int total = 0;
 
         String[][] cases = {
-//            {"abcddeeeffff",      "f"},  // ffff = 4
-//            {"aaaa",              "a"},  // aaaa = 4
-//            {"ffffdddffffddddd",  "d"},  // ddddd = 5 beats ffff = 4
+            {"abcddeeeffff",      "f"},  // ffff = 4
+            {"aaaa",              "a"},  // aaaa = 4
+            {"ffffdddffffddddd",  "d"},  // ddddd = 5 beats ffff = 4
             {"aaabbccccaaaa",         "c"},  // cccc = 4
-//            {"aaaabbcccc",         "a"},  // cccc = 4
-//            {"a",                 "a"},  // single char
-//            {"aabb",              "a"},  // tie — aa seen first
-//            {"abcd",              "a"},  // all length 1, first wins
-//            {"zzzaaa",            "z"},  // tie — zzz seen first
+            {"aaaabbcccc",         "a"},  // cccc = 4
+            {"a",                 "a"},  // single char
+            {"aabb",              "a"},  // tie — aa seen first
+            {"abcd",              "a"},  // all length 1, first wins
+            {"zzzaaa",            "z"},  // tie — zzz seen first
         };
 
         for (String[] tc : cases) {
